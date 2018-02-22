@@ -52,7 +52,8 @@ a:focus {
 }
 
 .sidebar {
-    flex-basis: 20rem;
+    flex-basis: 11rem;
+    flex-shrink: 0;
 }
 
 .sitelinks {
