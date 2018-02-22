@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Blog(models.Model):
+    author = models.CharField(max_length=255, null=False)
+    title = models.CharField(max_length=255, null=False, unique=True)
+    content = models.TextField(max_length=4000)
+    created_at = models.DateTimeField(auto_now_add=True)
