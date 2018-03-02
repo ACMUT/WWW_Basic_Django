@@ -19,9 +19,10 @@ from django.urls import path
 
 from blog.views import get_posts
 from www_blog import settings
-
+from django.views.generic import RedirectView
 urlpatterns = [
     path('posts/', get_posts),
+    path('', RedirectView.as_view(url = '/posts')),
     path('admin/', admin.site.urls),
 
 ]

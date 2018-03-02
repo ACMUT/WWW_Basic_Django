@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<main class="posts">
+    {% for post in posts %}
+        <article class="post">
+            <header class="post__header">
+                <h2 class="post__title">{{ post.title }}</h2>
+                <p class="post__meta">
+          ارسال شده توسط
+                    <span class="post__author">{{ post.author }}</span>
+    در تاریخ
+                    <time class="post__date" datetime="2018-02-21T12:47:59.116Z">{{ post.created_at }}</time>
+                </p>
+            </header>
+
+            <p>{{ post.content }}</p>
+        </article>
+        {% endfor %}
+</main>
+{% endblock %}

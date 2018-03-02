@@ -9,4 +9,4 @@ def get_posts(request):
         context = {'posts': BlogPost.objects.filter(author=author)}
     else:
         context = {'posts': BlogPost.objects.all()}
-    return render(request, 'blog/index.html', context)
+    return render(request, 'blog/posts.html', context)
