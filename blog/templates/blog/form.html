@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<main class="posts">
+    <form  action="" method="POST">
+        {% csrf_token %}
+        <label for="title"> عنوان:</label>
+        <input name="title" id="title">
+        <label for="content"> متن:</label>
+        <input name="content" id="content">
+        <input type="submit" value = "Post">
+    </form>
+</main>
+{% endblock %}

@@ -17,11 +17,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from blog.views import get_posts
+from blog.views import get_posts, new_post
 from www_blog import settings
 from django.views.generic import RedirectView
 urlpatterns = [
     path('posts/', get_posts),
+    path('posts/new', new_post),
     path('', RedirectView.as_view(url = '/posts')),
     path('admin/', admin.site.urls),
 
